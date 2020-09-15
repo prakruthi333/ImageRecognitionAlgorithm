@@ -8,6 +8,10 @@ output: html_document
 
 Water and sewer mains pipes are distributed around Victoria . Every Year water industries receives a more than 5 lakhs fault repairs, majority being replacing burst main. Work order is approved by Water industries which includes reviewing the images. A minimum of 20 photos are attached for each repair, and atleast 10,00,000 images are received every year. Approximately 30% of these images are reviewed manually for quality and work completion making it a tedious job. The main objective of the project is to decrease the time spent on approving the work order by use of automation.
 
+![](images/Bluepipe.png)  ![](images/Bluepipe.png)
+
+
+
 
 Built Algorithm from scratch 
 ======
@@ -23,6 +27,8 @@ Models
 
 Different combinations of convolutional and non convolutional layers using layouts were attmepted, but found the best results using the architecture of the LittleVGG (or VGG7) network. This network consists of 7 blocks of convolutions, each ending with a dropout layer for regularization to help prevent overfitting. When training the model several other tools were used to prevent overfitting to the training data. After each step (called epoch) the algorithm would use the validation data set to test the algorithm.
 #insert Image
+
+![](images/plots.png)
 
 
 
@@ -40,6 +46,8 @@ Visualising Models
 ------
 Once the models were trained it was important to inspect these classifiers, and attempt to verify their validity. One way this was achived was visualizing what the models were making their decisions on. This was done by creating heat maps that highlighted important pixel clusters. A function was created that found (@TODO: equation dy/dx pixels) based on the last convolutional layer. The higher this value, the more these pixels had an effect on the final result. In this way, was able to take individual images and look at what pixel clusters made them classify the image the way they did. This tool was used to double check.  However, if the object that is the subject of the classification is playing the primary role on the classification it strengthens our confidence in the algorithms results.
 
+![](images/image1.png)
+![](images/image.png)
 
 
 
@@ -49,6 +57,8 @@ Once the models were trained it was important to inspect these classifiers, and 
 Results
 ------
 After building the models, it was checked on our test data set. This is a set of images that the algorithms had not seen, to check their performance. Similar to the results from our validation data, the models built using transfer learning performed better than our models from scratch. Looking at our VGG16 model, our MobileNet model, and our LittleVGG model trained only on our data shows us that the VGG16 model outperformed the others when comparing overall accuracy.
+
+![](images/result.png)
 
 Although VGG16 scored a higher accuracy, it’s important to look past this score and take in all of the information in this project. it was observed that the VGG16 algorithm has the highest f1 score for classifying burst pipes, as well as high precision and recall scores.  
 
@@ -61,6 +71,6 @@ It can aslo be observed that the accuracies follow a general trend in that VGG16
 ------
 
 <a href = "https://crumplab.github.io">
-![](images/logo.png)
+
 </a>
 </div>
