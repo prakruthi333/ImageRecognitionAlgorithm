@@ -1,11 +1,8 @@
-name: "MyLabJournal"
+name: "Prakruthi Gowda"
 navbar:
-  title: "MyLabJournal"
+  title: "Prakruthi Gowda"
   left:
-    - text: "Home"
+    - text: "Image Recognition Algorithm"
       href: index.html
-    - text: "Journal"
-      href: Journal.html
-    - text: "Links"
-      href: Links.html
+  
 output_dir: "docs"

@@ -11,7 +11,7 @@
 
 
 
-<title>MyLabJournal</title>
+<title>index.utf8</title>
 
 <script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -279,18 +279,12 @@ $(document).ready(function () {
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="index.html">MyLabJournal</a>
+      <a class="navbar-brand" href="index.html">Prakruthi Gowda</a>
     </div>
     <div id="navbar" class="navbar-collapse collapse">
       <ul class="nav navbar-nav">
         <li>
-  <a href="index.html">Home</a>
-</li>
-<li>
-  <a href="Journal.html">Journal</a>
-</li>
-<li>
-  <a href="Links.html">Links</a>
+  <a href="index.html">Image Recognition Algorithm</a>
 </li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
@@ -304,18 +298,18 @@ $(document).ready(function () {
 
 
 
-<h1 class="title toc-ignore">MyLabJournal</h1>
 
 </div>
 
 
-<div id="my-lab-journal" class="section level1">
-<h1><strong>My Lab Journal</strong></h1>
+<div id="this-project-aims-to-build-an-image-recognition-algorithm-to-increase-the-efficiency-of-the-work-order-reviews-in-water-industries" class="section level1">
+<h1><strong>This project aims to build an image recognition algorithm to increase the efficiency of the work order reviews in water Industries</strong></h1>
 <p>Water and sewer mains pipes are distributed around Victoria . Every Year water industries receives a more than 5 lakhs fault repairs, majority being replacing burst main. Work order is approved by Water industries which includes reviewing the images. A minimum of 20 photos are attached for each repair, and atleast 10,00,000 images are received every year. Approximately 30% of these images are reviewed manually for quality and work completion making it a tedious job. The main objective of the project is to decrease the time spent on approving the work order by use of automation.</p>
 </div>
 <div id="built-algorithm-from-scratch" class="section level1">
 <h1>Built Algorithm from scratch</h1>
 <p>The dataset consisted of 500 images. When an image is input into a computer they read it as three matrices of pixel values. One each for the red, green and blue colour index. The python package keras was used to import our images, and reshape them to the same size and the pixel values were normalized between 0 and 1. Using keras the dataset was split into training and test/validation data based on a percentage. I used an 80/20 split for training and validation data.</p>
+<p>code: <a href="https://drive.google.com/file/d/1yrs32ha5ph6PoWTm2-B3OW4Ybg_jVROL/view?usp=sharing" class="uri">https://drive.google.com/file/d/1yrs32ha5ph6PoWTm2-B3OW4Ybg_jVROL/view?usp=sharing</a></p>
 <p>Once processed I used Convolutional Neural Networks(CNNs) to build image recognition algorithms. CNNs are a type of deep learning that contain convolutional layers used to pick up patterns in your data, that otherwise might not be seen. Convolutional neural networks are composed of convolutional layer, a pooled layer and a fully connected layer. Two main pooling methods were used, mean pooling and max pooling. The fully connected layer integrates is the result after the image is passed through multiple convolutional layers and pooling layers to obtain the high-layer semantic feature for image classification.</p>
 </div>
 <div id="models" class="section level1">
