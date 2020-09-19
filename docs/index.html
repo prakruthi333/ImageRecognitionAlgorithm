@@ -333,8 +333,8 @@ $(document).ready(function () {
 <p>As it can be observed the loss dips quickly at the start and slower as time goes on. Eventually at epoch 38, it hits the lowest loss value on the validation data. These are the weights that settle on for the algorithm, and are restored when the model finishes training. It’s important to keep these checks in place to guarantee our models accuracy will remain similar when used on new images.</p>
 <p>code: <a href="https://gist.github.com/prakruthi333/55b29a76cda20d2626a5e277c0fc2f8f" class="uri">https://gist.github.com/prakruthi333/55b29a76cda20d2626a5e277c0fc2f8f</a></p>
 </div>
-<div id="models-algorithms" class="section level1">
-<h1>Models Algorithms</h1>
+<div id="transfer-learning-algorithms" class="section level1">
+<h1>Transfer learning Algorithms</h1>
 <p>After attempting to build the model from scratch, next was to build models using transfer learning. Transfer learning involves using a CNN’s trained on another larger image data set, and applying it to your own images.</p>
 <p>During the project, building a plethora of models were attempted using transfer learning. Three of the most popular were MobileNet, ResNet and VGG16. For each of these structured models were trained on the imagenet data set. All of the models plateaued over a much shorter amount of epochs.</p>
 <p>MobileNet was the most impressive, hitting its highest validation loss score at only the 3rd epoch. These models had a tendency to quickly start overfitting to the training data. The most difficulty with ResNet, as it would quickly begin scoring in the 90+% accuracy on the training data, but maintaining a low accuracy on the validation data. As ResNet As ResNet had the most layers, it made sense that it would overfit with a small amount of images to train on.</p>

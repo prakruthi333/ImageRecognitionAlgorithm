@@ -61,7 +61,7 @@ As it can be observed the loss dips quickly at the start and slower as time goes
 code: https://gist.github.com/prakruthi333/55b29a76cda20d2626a5e277c0fc2f8f
 
 
-Models Algorithms
+Transfer learning Algorithms
 ======
 
 After attempting to build the model from scratch, next was to build models using transfer learning. Transfer learning involves using a CNN's trained on another larger image data set, and applying it to your own images.
