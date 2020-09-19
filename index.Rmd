@@ -17,7 +17,7 @@ Built Algorithm from scratch
 ======
 The dataset consisted of 500 images. When an image is input into a computer they read it as three matrices of pixel values. One each for the red, green and blue colour index. The python package keras was used to import our images, and reshape them to the same size and the pixel values were normalized between 0 and 1. Using keras the dataset was split into training and test/validation data based on a percentage. I used an 80/20 split for training and validation data.
 
-code: https://drive.google.com/file/d/1yrs32ha5ph6PoWTm2-B3OW4Ybg_jVROL/view?usp=sharing
+code: https://gist.github.com/prakruthi333/55b29a76cda20d2626a5e277c0fc2f8f
 
 Once processed I used Convolutional Neural Networks(CNNs) to build image recognition algorithms. CNNs are a type of deep learning that contain convolutional layers used to pick up patterns in your data, that otherwise might not be seen. Convolutional neural networks are composed of convolutional layer, a pooled layer and a fully connected layer. Two main pooling methods were used, mean pooling and max pooling. The fully connected layer integrates is the result after the image is passed through multiple convolutional layers and pooling layers to obtain the high-layer semantic feature for image classification.
 
