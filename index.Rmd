@@ -48,7 +48,7 @@ Using the best deep learning library keras, deep convolutional networks were bui
 
 The first attempt at providing accurate classifiers started with building these CNNs from scratch. Building the CNNs does not necessarily mean that the architecture of the algorithm was created. It simply implies that the algorithm was trained exclusively on data provided. Different combinations of Convolutional and non Convolutional layers were attempted but discovered that the best results was from using the architecture of the littleVGG network. This network consisted of 7 blocks of convolutions, each ending with dropout layer for regularization to help prevent overfitting.
 
-#insert Image
+
 
 ![](images/plots.png)
 
@@ -71,9 +71,9 @@ During the project, building a plethora of models were attempted using transfer 
 
 MobileNet was the most impressive, hitting its highest validation loss score at only the 3rd epoch. These models had a tendency to quickly start overfitting to the training data. The most difficulty with ResNet, as it would quickly begin scoring in the 90+% accuracy on the training data, but maintaining a low accuracy on the validation data. As ResNet As ResNet had the most layers, it made sense that it would overfit with a small amount of images to train on.
 
-Code(MobileNet):
-Code(ResNet):
-Code(Vgg16):
+Code(MobileNet):https://gist.github.com/prakruthi333/c5c5056ebb0b8cba6d39f6aedf6e995e
+
+Code(Vgg16): https://gist.github.com/prakruthi333/68aec72d0e3da7a9bf322e55c281bbdd
 
 Visualising Models
 ------
@@ -81,13 +81,14 @@ Once the models were trained it was important to inspect these classifiers, and 
 
 ![](images/image1.png)
 ![](images/image.png)
-Code: 
+
+Code: https://gist.github.com/prakruthi333/e9877c6c57994afdcf14fb2bcabbfd02
 
 Results
 ======
 After building the models, it was checked on the test data set. This is a set of images that the algorithms had not seen,hence to check th4 performance. Similar to the results from our validation data, the models built using transfer learning performed better than the models LittleVGG. Looking at the VGG16 model, MobileNet model, and LittleVGG model trained only on the data of pipes, it showed that the VGG16 model outperformed the others when comparing overall accuracy.
 
-![](images/result.png)
+![](images/result1.png)
 
 Although VGG16 scored a higher accuracy, it’s important to look past this score and take in all of the information in this project. it was observed that the VGG16 algorithm has the highest f1 score for classifying burst pipes, as well as high precision and recall scores.  
 
