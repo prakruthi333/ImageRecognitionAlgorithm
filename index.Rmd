@@ -6,11 +6,23 @@ output: html_document
 
 # **This project aims to build an Image Recognition Algorithm to increase the efficiency of the work order reviews in Water Industries**
 
+
+Codes
+---
+CNN's: https://gist.github.com/prakruthi333/55b29a76cda20d2626a5e277c0fc2f8f
+
+MobileNet: https://gist.github.com/prakruthi333/c5c5056ebb0b8cba6d39f6aedf6e995e
+
+Vgg16: https://gist.github.com/prakruthi333/68aec72d0e3da7a9bf322e55c281bbdd
+
+Visualising Model: https://gist.github.com/prakruthi333/e9877c6c57994afdcf14fb2bcabbfd02
+
 Water and sewer mains pipes are distributed around Victoria. Every Year water industries receives numerous faulty repairs, majority being replacing burst main(broken pipe). Work order is approved by Water industries which includes reviewing the images. A minimum of 20 photos are attached for each repair, and at least 10,00,000 images are received every year. Approximately 30% of these images are reviewed manually for quality and work completion making it a tedious job. The main objective of the project is to decrease the time spent on approving the work order by use of automation.
 
 ![](images/Bluepipe.png)  
 
-**Objectives**
+Objectives
+----
 
 -To build an algorithm that is accurate. Our objective was to obtain 95% accuracy when classifying images.
 
@@ -23,13 +35,13 @@ Water and sewer mains pipes are distributed around Victoria. Every Year water in
 -The final objective was that the algorithm should be user friendly. No extensive prior knowledge of computer programming is required to use the algorithm.
 
 Dataset
-======
+------
 
 The data for this project was composed of images taken from various work sites by contractors responsible for repairing the faulty sites. The final set of images contained roughly 1,200 photos of burst water main as well as images of various other parts of work sites that came in with these pictures. These “other” images were useful in building our algorithms as they provided the data to classify our images against.
 
 
 Data Preprocessing
-======
+------
 
 -The computer reads the image as three matrices of pixel values. One each for the red, green and blue color index. Using the python package keras, the images were imported and reshaped to the same size. 
 
@@ -38,7 +50,7 @@ Data Preprocessing
 -Using keras the dataset was split into training and test/validation data based on a percentage. Here it was 80/20 split for training and validation data.
 
 Building Algorithms
-======
+------
 
 Once preprocessed, Image recognition algorithms were built using Convolutional Neural Networks(CNNs). CNNs are a type of deep learning that contain convolutional layers used to pick up patterns in the data, that otherwise might not be seen. 
 
@@ -58,11 +70,10 @@ When training the models several tools were used to prevent overfitting to the t
 As it can be observed the loss dips quickly at the start and slower as time goes on. Eventually at epoch 38, it hits the lowest loss value on the validation data. These are the weights that settle on for the algorithm, and are restored when the model finishes training. It’s important to keep these checks in place to guarantee our models accuracy will remain similar when used on new images.
 
 
-code: https://gist.github.com/prakruthi333/55b29a76cda20d2626a5e277c0fc2f8f
 
 
 Transfer learning Algorithms
-======
+-----
 
 After attempting to build the model from scratch, next was to build models using transfer learning. Transfer learning involves using a CNN's trained on another larger image data set, and applying it to your own images.
 
@@ -71,9 +82,7 @@ During the project, building a plethora of models were attempted using transfer 
 
 MobileNet was the most impressive, hitting its highest validation loss score at only the 3rd epoch. These models had a tendency to quickly start overfitting to the training data. The most difficulty with ResNet, as it would quickly begin scoring in the 90+% accuracy on the training data, but maintaining a low accuracy on the validation data. As ResNet As ResNet had the most layers, it made sense that it would overfit with a small amount of images to train on.
 
-Code(MobileNet):https://gist.github.com/prakruthi333/c5c5056ebb0b8cba6d39f6aedf6e995e
 
-Code(Vgg16): https://gist.github.com/prakruthi333/68aec72d0e3da7a9bf322e55c281bbdd
 
 Visualising Models
 ------
@@ -82,10 +91,10 @@ Once the models were trained it was important to inspect these classifiers, and 
 ![](images/image1.png)
 ![](images/image.png)
 
-Code: https://gist.github.com/prakruthi333/e9877c6c57994afdcf14fb2bcabbfd02
+
 
 Results
-======
+------
 After building the models, it was checked on the test data set. This is a set of images that the algorithms had not seen,hence to check th4 performance. Similar to the results from our validation data, the models built using transfer learning performed better than the models LittleVGG. Looking at the VGG16 model, MobileNet model, and LittleVGG model trained only on the data of pipes, it showed that the VGG16 model outperformed the others when comparing overall accuracy.
 
 ![](images/result1.png)
